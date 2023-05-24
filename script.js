@@ -1,5 +1,9 @@
-function selecionarItens(){
-    let selecionado = window.document.querySelectorAll('.menu');
-    selecionado.classList.toggle('selecionado');
-    console.log(selecionado);
+function selecionarItens(selecao) {
+    const selecionado = window.document.querySelector('.prato');
+
+    if (selecionado != null) {
+        selecionado.classList.toggle('selecionado');
+    } else {
+        selecionado.classList.remove('selecionado');
+    }
 }
