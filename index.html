@@ -9,6 +9,7 @@
 
     <link href="./css/reset.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/estilosjs.css" rel ="stylesheet"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,21 +33,21 @@
         <div class="categoria-prato">
             <h1>Primeiro, seu prato</h1>
             <div class="menu-prato">
-                <div class="prato-um" data-test="dish">
+                <div class="prato-um" onclick ="selecionarPrato('.prato-um')" data-test="dish">
                     <img src="./img/espetinho.jpg" />
                     <h2 data-test="item-name">Espetinho</h2>
                     <p>Espetinho de carne</p>
                     <h3 data-test="item-price">R$ 32,90</h3>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="prato-dois" data-test="dish">
+                <div class="prato-dois" onclick ="selecionarPrato('.prato-dois')" data-test="dish">
                     <img src="./img/sanduiche.png" />
                     <h2 data-test="item-name">Sanduíche</h2>
                     <p>Sanduíche de frango</p>
                     <h3 data-test="item-price">R$ 18,90</h3>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="prato-tres" data-test="dish">
+                <div class="prato-tres" onclick ="selecionarPrato('.prato-tres')" data-test="dish">
                     <img src="./img/macarrao.jpg" />
                     <h2 data-test="item-name">Macarrão</h2>
                     <p>Macarrão ao molho</p>
@@ -58,21 +59,21 @@
         <div class="categoria-bebida">
             <h1>Agora, sua bebida</h1>
             <div class="menu-bebida">
-                <div class="bebida-um" data-test="drink">
+                <div class="bebida-um" onclick ="selecionarBebida('.bebida-um')" data-test="drink">
                     <img src="./img/coca-cola.png" />
                     <h2 data-test="item-name">Coquinha gelada</h2>
                     <p>Lata 350ml</p>
                     <h3 data-test="item-price">R$ 5,90</h3>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="bebida-dois" data-test="drink">
+                <div class="bebida-dois" onclick ="selecionarBebida('.bebida-dois')" data-test="drink">
                     <img src="./img/suco.jpeg" />
                     <h2 data-test="item-name">Suco de Maracujá</h2>
                     <p>500ml</p>
                     <h3 data-test="item-price">R$ 12,90</h3>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="bebida-tres" data-test="drink">
+                <div class="bebida-tres" onclick ="selecionarBebida('.bebida-tres')" data-test="drink">
                     <img src="./img/pepsi.webp" />
                     <h2 data-test="item-name">Pepsi geladinha</h2>
                     <p>Lata 350ml</p>
@@ -84,21 +85,21 @@
         <div class="categoria-sobremesa">
             <h1>Por fim, sua sobremesa</h1>
             <div class="menu-sobremesa">
-                <div class="sobremesa-um" data-test="dessert">
+                <div class="sobremesa-um" onclick ="selecionarSobremesa('.sobremesa-um')" data-test="dessert">
                     <img src="./img/pudim.png" />
                     <h2 data-test="item-name">Pudim</h2>
                     <p>Apenas pudim</p>
                     <h3 data-test="item-price">R$ 15,90</h3>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="sobremesa-dois" data-test="dessert">
+                <div class="sobremesa-dois" onclick ="selecionarSobremesa('.sobremesa-dois')" data-test="dessert">
                     <img src="./img/bolos-gelados.webp" />
                     <h2 data-test="item-name">Bolo</h2>
                     <p>Bolo de Chocolate</p>
                     <h3 data-test="item-price">R$ 28,90</h3>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="sobremesa-tres" data-test="dessert">
+                <div class="sobremesa-tres" onclick ="selecionarSobremesa('.sobremesa-tres')" data-test="dessert">
                     <img src="./img/sorvete.png" />
                     <h2 data-test="item-name">Sorvete</h2>
                     <p>Sorvete com bolo</p>
