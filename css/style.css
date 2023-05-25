@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
 }
 
-/********************* Formatações que vão se repetir em todos os elementos ********************/
+/*********************Formatações que vão se repetir em todos os elementos********************/
 
 h1 {
     font-family: 'Righteous', cursive;
@@ -16,10 +16,8 @@ h1 {
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
-    line-height: 32px;
-    letter-spacing: 0.018em;
 
-    margin-top: 31px;
+    margin-top: 30px;
     margin-bottom: 17px;
     margin-left: 19px;
 }
@@ -27,28 +25,12 @@ h1 {
 h2 {
     font-family: 'Roboto', sans-serif;
 
-    color: black;
+    color: #333333;
 
     font-weight: 700;
     font-size: 16px;
 
-    margin-top: 0px;
-    margin-right: 18px;
-    margin-left: 15px;
-    margin-bottom: 10px;
-}
-
-h3 {
-    font-family: 'Roboto', sans-serif;
-
-    color: black;
-
-    font-size: 16px;
-    font-weight: 500;
-
-    margin-top: 16px;
-    margin-bottom: 13px;
-    margin-left: 14px;
+    margin: 8px 18px 10px 14px;
 }
 
 p {
@@ -59,10 +41,18 @@ p {
     font-size: 15px;
     font-weight: 300;
 
-    margin-top: 1px;
-    margin-bottom: 5px;
-    margin-right: 11px;
-    margin-left: 14px;
+    margin: 0px 11px 5px 14px;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+
+    color: #000000;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    margin: 10px 11px 13px 14px;
 }
 
 img {
@@ -74,7 +64,7 @@ img {
     margin: 18px 14px 8px 14px;
 }
 
-/********************* Formatação do cabeçalho ********************/
+/*********************Formatação do cabeçalho********************/
 
 .cabecalho {
     background-color: #CF2B2B;
@@ -116,7 +106,7 @@ img {
     margin-bottom: 18px;
 }
 
-/********************* Formatação do conteúdo principal ********************/
+/*********************Formatação do conteúdo********************/
 
 .conteudo-principal {
     width: 100%;
@@ -127,11 +117,13 @@ img {
     margin-bottom: 110px;
 }
 
-.categorias {
+/***********Formatação dos pratos**********/
+
+.categoria-prato {
     width: 100%;
 }
 
-.menu {
+.menu-prato {
     width: 100%;
 
     display: flex;
@@ -139,15 +131,15 @@ img {
     overflow-x: scroll;
 }
 
-.menu::-webkit-scrollbar {
+.menu-prato::-webkit-scrollbar {
     display: none;
 }
 
-.prato {
+.prato-um {
     background-color: #FFFFFF;
 
     width: 172px;
-    height: 216px;
+    height: auto;
 
     border-radius: 9px;
 
@@ -157,12 +149,212 @@ img {
     box-shadow: 10px 0px 5px -5px rgba(0, 0, 0, 0.25);
 
     position: relative;
-
-    display: flex;
-    flex-direction: column;
 }
 
-/********************* Formatação do rodapé ********************/
+.prato-dois {
+    background-color: #FFFFFF;
+
+    width: 172px;
+    height: auto;
+
+    border-radius: 9px;
+
+    margin-right: 19px;
+    margin-left: 19px;
+
+    box-shadow: 10px 0px 5px -5px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+}
+
+.prato-tres {
+    background-color: #FFFFFF;
+
+    width: 172px;
+    height: auto;
+
+    border-radius: 9px;
+
+    margin-right: 19px;
+    margin-left: 19px;
+
+    box-shadow: 10px 0px 5px -5px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+}
+
+.menu-prato ion-icon {
+    font-size: 20px;
+
+    color: #32B72F;
+
+    opacity: 1;
+
+    position: absolute;
+
+    right: 5px;
+    bottom: 5px;
+}
+
+/***********Formatação das bebidas**********/
+
+.categoria-bebida {
+    width: 100%;
+}
+
+.menu-bebida {
+    width: 100%;
+
+    display: flex;
+
+    overflow-x: scroll;
+}
+
+.menu-bebida::-webkit-scrollbar {
+    display: none;
+}
+
+.bebida-um {
+    background-color: #FFFFFF;
+
+    width: 172px;
+    height: auto;
+
+    border-radius: 9px;
+
+    margin-right: 19px;
+    margin-left: 19px;
+
+    box-shadow: 10px 0px 5px -5px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+}
+
+.bebida-dois {
+    background-color: #FFFFFF;
+
+    width: 172px;
+    height: auto;
+
+    border-radius: 9px;
+
+    margin-right: 19px;
+    margin-left: 19px;
+
+    box-shadow: 10px 0px 5px -5px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+}
+
+.bebida-tres {
+    background-color: #FFFFFF;
+
+    width: 172px;
+    height: auto;
+
+    border-radius: 9px;
+
+    margin-right: 19px;
+    margin-left: 19px;
+
+    box-shadow: 10px 0px 5px -5px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+}
+
+.menu-bebida ion-icon {
+    font-size: 20px;
+
+    color: #32B72F;
+
+    opacity: 1;
+
+    position: absolute;
+
+    right: 5px;
+    bottom: 5px;
+}
+
+/***********Formatação das sobremesas**********/
+
+.categoria-sobremesa {
+    width: 100%;
+}
+
+.menu-sobremesa {
+    width: 100%;
+
+    display: flex;
+
+    overflow-x: scroll;
+}
+
+.menu-sobremesa::-webkit-scrollbar {
+    display: none;
+}
+
+.sobremesa-um {
+    background-color: #FFFFFF;
+
+    width: 172px;
+    height: auto;
+
+    border-radius: 9px;
+
+    margin-right: 19px;
+    margin-left: 19px;
+
+    box-shadow: 10px 0px 5px -5px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+}
+
+.sobremesa-dois {
+    background-color: #FFFFFF;
+
+    width: 172px;
+    height: auto;
+
+    border-radius: 9px;
+
+    margin-right: 19px;
+    margin-left: 19px;
+
+    box-shadow: 10px 0px 5px -5px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+}
+
+.sobremesa-tres {
+    background-color: #FFFFFF;
+
+    width: 172px;
+    height: auto;
+
+    border-radius: 9px;
+
+    margin-right: 19px;
+    margin-left: 19px;
+
+    box-shadow: 10px 0px 5px -5px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+}
+
+.menu-sobremesa ion-icon {
+    font-size: 20px;
+
+    color: #32B72F;
+
+    opacity: 1;
+
+    position: absolute;
+
+    right: 5px;
+    bottom: 5px;
+}
+
+/*********************Formatação do rodapé********************/
 
 .rodape {
     background-color: #FFFFFF;
@@ -177,10 +369,11 @@ img {
     position: fixed;
     bottom: 0;
     left: 0;
+
+    z-index: 1;
 }
 
 .botao {
-
     width: 364px;
     height: 61px;
 
@@ -199,22 +392,4 @@ img {
     border: none;
 
     background-color: #CBCBCB;
-}
-
-.prato ion-icon {
-
-    position: absolute;
-
-    right: 5px;
-    bottom: 5px;
-
-    font-size: 20px;
-
-    color: #32B72F;
-
-    opacity: 1;
-}
-
-.selecionado{
-    border: 3px solid #32B72F;
 }
