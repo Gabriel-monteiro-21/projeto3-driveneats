@@ -1,3 +1,13 @@
-.borda{
+.borda {
     border: 4px solid #32B72F;
+    box-sizing: border-box;
+}
+
+.borda ion-icon{
+    opacity: 1;
+}
+
+.ativarBotao {
+    background-color: #32B72F;
+    font-weight: bold;
 }
