@@ -2,11 +2,12 @@ let prato;
 let bebida;
 let sobremesa;
 
-function selecionarBotao() {
-    console.log(prato);
-    console.log(bebida);
-    console.log(sobremesa);
+let precoPrato;
+let precoBebida;
+let precoSobremesa;
 
+function selecionarBotao() {
+    
     // Verficar se o prato foi selecionado
     if (prato !== undefined) {
         // Verificar se a bebida foi selecionada
@@ -60,6 +61,7 @@ function selecionarPrato(pratoSelecionado) {
     pratoSelecionado.classList.add('borda');
 
     prato = pratoSelecionado.querySelector('.titulo-prato').innerHTML;
+    precoPrato = pratoSelecionado.querySelector('.preco-prato').innerHTML;
 
     selecionarBotao();
 }
@@ -79,6 +81,7 @@ function selecionarBebida(bebidaSelecionada) {
     bebidaSelecionada.classList.add('borda');
 
     bebida = bebidaSelecionada.querySelector('.titulo-bebida').innerHTML;
+    precoBebida = bebidaSelecionada.querySelector('.preco-bebida').innerHTML;
 
     selecionarBotao();
 }
@@ -98,6 +101,33 @@ function selecionarSobremesa(sobremesaSelecionada) {
     sobremesaSelecionada.classList.add('borda');
 
     sobremesa = sobremesaSelecionada.querySelector('.titulo-sobremesa').innerHTML;
+    precoSobremesa = sobremesaSelecionada.querySelector('.preco-sobremesa').innerHTML;
 
     selecionarBotao();
+}
+
+function ativarBotao(){
+
+    let precoPratoConvertido = precoPrato.replace('R$', '');
+    precoPratoConvertido = precoPratoConvertido.replace(',', '.');
+    precoPratoConvertido = Number(precoPratoConvertido);
+
+    let precoBebidaConvertido = precoBebida.replace('R$', '');
+    precoBebidaConvertido = precoBebidaConvertido.replace(',', '.');
+    precoBebidaConvertido = Number(precoBebidaConvertido);
+
+    let precoSobremesaConvertido = precoSobremesa.replace('R$', '');
+    precoSobremesaConvertido = precoSobremesaConvertido.replace(',', '.');
+    precoSobremesaConvertido = Number(precoSobremesaConvertido);
+
+    const total = precoPratoConvertido +  precoBebidaConvertido + precoSobremesaConvertido;
+    
+    const mensagemWhatsApp = `Olá, gostaria de fazer o pedido:
+    - Prato: ${prato}
+    - Bebida: ${bebida}
+    - Sobremesa: ${sobremesa}
+    Total: R$ ${total.toFixed(2)}`;
+
+    console.log(mensagemWhatsApp);
+
 }
