@@ -130,21 +130,27 @@ function ativarBotao(){
 function confirmarPedido(){
     const bonus = document.querySelector('.bonus');
     bonus.classList.remove('display-none');
-    const divPrato = bonus.querySelector('.prato .nome');
-    divPrato.innerHTML = prato;
+
+    const divNomePrato = bonus.querySelector('.prato .nome');
+    divNomePrato.innerHTML = prato;
     const divPrecoPrato = bonus.querySelector('.prato .preco');
     divPrecoPrato.innerHTML = precoPrato;
+
     const divNomeBebida = bonus.querySelector('.bebida .nome');
     divNomeBebida.innerHTML = bebida;
     const divPrecoBebida = bonus.querySelector('.bebida .preco');
     divPrecoBebida.innerHTML = precoBebida;
-    const divSobremesa = bonus.querySelector('.sobremesa .nome');
-    divSobremesa.innerHTML = sobremesa;
+
+    const divNomeSobremesa = bonus.querySelector('.sobremesa .nome');
+    divNomeSobremesa.innerHTML = sobremesa;
     const divPrecoSobremesa = bonus.querySelector('.sobremesa .preco');
     divPrecoSobremesa.innerHTML = precoSobremesa;
-    const valorTotal = valorTotal()
-    const divTotal = bonus.querySelector('preco-total');
-    divTotal.innerHTML = valorTotal;
+
+    const tudoTotal = valorTotal();
+
+    const divTotal = bonus.querySelector('.preco-total');
+
+    divTotal.innerHTML = tudoTotal;
 }
 
 function valorTotal(){
@@ -161,8 +167,8 @@ function valorTotal(){
     precoSobremesaConvertido = precoSobremesaConvertido.replace(',', '.');
     precoSobremesaConvertido = Number(precoSobremesaConvertido);
 
-    const valorTotal = precoPratoConvertido +  precoBebidaConvertido + precoSobremesaConvertido;
-    return valorTotal.toFixed(2);
+    const totalValor = precoPratoConvertido +  precoBebidaConvertido + precoSobremesaConvertido;
+    return totalValor.toFixed(2);
 }
 
 function cancelar(){
