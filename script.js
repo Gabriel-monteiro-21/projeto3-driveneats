@@ -154,6 +154,7 @@ function confirmarPedido(){
 }
 
 function valorTotal(){
+    
     let precoPratoConvertido = precoPrato.replace('R$', '');
     precoPratoConvertido = precoPratoConvertido.replace(',', '.');
     precoPratoConvertido = Number(precoPratoConvertido);
