@@ -119,7 +119,7 @@ function ativarBotao(){
     - Sobremesa: ${sobremesa}
     Total: R$ ${total}
     Nome: ${nome}
-    Endereço: ${nome}`;
+    Endereço: ${endereço}`;
 
     const mensagem = encodeURIComponent(mensagemWhatsApp);
 
