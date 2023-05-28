@@ -108,6 +108,47 @@ function selecionarSobremesa(sobremesaSelecionada) {
 
 function ativarBotao(){
 
+    const nome = prompt('Qual o seu nome?');
+    const endereço = prompt('Qual o seu endereço?');
+
+    const total = valorTotal();
+    
+    const mensagemWhatsApp = `Olá, gostaria de fazer o pedido:\n
+    - Prato: ${prato}\n
+    - Bebida: ${bebida}\n
+    - Sobremesa: ${sobremesa}\n
+    Total: R$ ${total}\n
+    Nome: ${nome}\n
+    Endereço: ${nome}\n`;
+
+    const mensagem = encodeURIComponent(mensagemWhatsApp);
+
+    window.open(`https://wa.me//5562993774363?text=${mensagemWhatsApp}`);
+
+}
+
+function confirmarPedido(){
+    const bonus = document.querySelector('.bonus');
+    bonus.classList.remove('display-none');
+    const divPrato = bonus.querySelector('.prato .nome');
+    divPrato.innerHTML = prato;
+    const divPrecoPrato = bonus.querySelector('.prato .preco');
+    divPrecoPrato.innerHTML = precoPrato;
+    const divNomeBebida = bonus.querySelector('.bebida .nome');
+    divNomeBebida.innerHTML = bebida;
+    const divPrecoBebida = bonus.querySelector('.bebida .preco');
+    divPrecoBebida.innerHTML = precoBebida;
+    const divSobremesa = bonus.querySelector('.sobremesa .nome');
+    divSobremesa.innerHTML = sobremesa;
+    const divPrecoSobremesa = bonus.querySelector('.sobremesa .preco');
+    divPrecoSobremesa.innerHTML = precoSobremesa;
+    const valorTotal = valorTotal()
+    const divTotal = bonus.querySelector('preco-total');
+    divTotal.innerHTML = valorTotal;
+}
+
+function valorTotal(){
+
     let precoPratoConvertido = precoPrato.replace('R$', '');
     precoPratoConvertido = precoPratoConvertido.replace(',', '.');
     precoPratoConvertido = Number(precoPratoConvertido);
@@ -120,16 +161,11 @@ function ativarBotao(){
     precoSobremesaConvertido = precoSobremesaConvertido.replace(',', '.');
     precoSobremesaConvertido = Number(precoSobremesaConvertido);
 
-    const total = precoPratoConvertido +  precoBebidaConvertido + precoSobremesaConvertido;
-    
-    const mensagemWhatsApp = `Olá, gostaria de fazer o pedido:
-    - Prato: ${prato}
-    - Bebida: ${bebida}
-    - Sobremesa: ${sobremesa}
-    Total: R$ ${total.toFixed(2)}`;
+    const valorTotal = precoPratoConvertido +  precoBebidaConvertido + precoSobremesaConvertido;
+    return valorTotal.toFixed(2);
+}
 
-    const mensagem = encodeURIComponent(mensagemWhatsApp);
-
-    window.open(`https://wa.me//5562993774363?text=${mensagemWhatsApp}`);
-
+function cancelar(){
+    const bonus1 = document.querySelector('.bonus');
+    bonus1.classList.add('display-none');
 }
