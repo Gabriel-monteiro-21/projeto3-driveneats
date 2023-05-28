@@ -128,6 +128,8 @@ function ativarBotao(){
     - Sobremesa: ${sobremesa}
     Total: R$ ${total.toFixed(2)}`;
 
-    console.log(mensagemWhatsApp);
+    const mensagem = encodeURIComponent(mensagemWhatsApp);
+
+    window.open(`https://wa.me//5562993774363?text=${mensagemWhatsApp}`);
 
 }
