@@ -118,6 +118,7 @@ function ativarBotao(){
     - Bebida: ${bebida}
     - Sobremesa: ${sobremesa}
     Total: R$ ${total}
+
     Nome: ${nome}
     Endereço: ${endereço}`;
 
