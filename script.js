@@ -114,13 +114,13 @@ function ativarBotao(){
     const total = valorTotal();
     
     const mensagemWhatsApp = `Olá, gostaria de fazer o pedido:
-    - Prato: ${prato}
-    - Bebida: ${bebida}
-    - Sobremesa: ${sobremesa}
-    Total: R$ ${total}
+    - Prato: ${prato}\n
+    - Bebida: ${bebida}\n
+    - Sobremesa: ${sobremesa}\n
+    Total: R$ ${total}\n
 
-    Nome: ${nome}
-    Endereço: ${endereço}`;
+    Nome: ${nome}\n
+    Endereço: ${endereço}\n`;
 
     const mensagem = encodeURIComponent(mensagemWhatsApp);
 
