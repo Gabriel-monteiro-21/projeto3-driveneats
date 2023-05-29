@@ -118,13 +118,13 @@ function ativarBotao(){
     - Bebida: ${bebida}\n
     - Sobremesa: ${sobremesa}\n
     Total: R$ ${total}\n
-
+    
     Nome: ${nome}\n
     Endereço: ${endereço}\n`;
 
     const mensagem = encodeURIComponent(mensagemWhatsApp);
 
-    window.open(`https://wa.me//5562993774363?text=${mensagemWhatsApp}`);
+    window.open(`https://wa.me//5562993774363?text=${mensagem}`);
 
 }
 
